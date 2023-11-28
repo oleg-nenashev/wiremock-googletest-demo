@@ -1,7 +1,7 @@
 # Google Test demo
 # This is based on https://google.github.io/googletest/quickstart-cmake.html
 cmake_minimum_required (VERSION 3.16.3)
-project(wiremock-google-test-demo
+project(wiremock-googletest-demo
     VERSION 0.0.1
     DESCRIPTION "Demonstrates usage of WireMock with Testcontainers for C/C++ in Google Test")
 set(CMAKE_CXX_STANDARD 14)
