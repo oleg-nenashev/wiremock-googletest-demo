@@ -1,0 +1,16 @@
+# IDE
+.vscode
+
+# CMake
+CMakeFiles
+Makefile
+CMakeCache.txt
+*.cmake
+*.pc
+**/Testing/Temporary/**
+DartConfiguration.tcl
+build/
+/_deps
+/lib
+*.out
+
