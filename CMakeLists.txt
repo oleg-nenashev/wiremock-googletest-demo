@@ -1,5 +1,4 @@
-# Google Test demo
-# This is based on https://google.github.io/googletest/quickstart-cmake.html
+# WireMock and Google Test demo
 cmake_minimum_required (VERSION 3.16.3)
 project(wiremock-googletest-demo
     VERSION 0.0.1
@@ -9,6 +8,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 set(TARGET_OUT ${PROJECT_NAME}.out)
 
+# Testcontainers for C/C++ with CPM
 include(cmake/CPM.cmake)
 CPMAddPackage(
     NAME testcontainers-c
