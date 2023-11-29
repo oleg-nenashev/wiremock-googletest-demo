@@ -10,7 +10,11 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(TARGET_OUT ${PROJECT_NAME}.out)
 
 include(cmake/CPM.cmake)
-CPMAddPackage("gh:testcontainers/testcontainers-c@0.0.1")
+CPMAddPackage(
+    NAME testcontainers-c
+    VERSION 0.0.2
+    GITHUB_REPOSITORY "testcontainers/testcontainers-c"
+    OPTIONS "SKIP_DEMOS TRUE")
 
 # GoogleTest v1.14.0
 include(FetchContent)
@@ -31,4 +35,4 @@ target_link_libraries(${TARGET_OUT} PRIVATE GTest::gtest_main)
 
 include(GoogleTest)
 # FIXME Testcontainers for C/C++ fails when tests are launched as a sub-module
-gtest_add_tests(${TARGET_OUT} SOURCES MyClientTest.cpp)
+gtest_discover_tests(${TARGET_OUT})
